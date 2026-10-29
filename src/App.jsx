@@ -3,14 +3,13 @@ import './App.scss';
 
 export const App = () => {
   const [count, setCount] = useState(0);
-  let copy = count;
 
   const addOne = () => {
-    setCount((copy += 1));
+    setCount(prevNumber => prevNumber + 1);
   };
 
   const add100 = () => {
-    setCount((copy += 100));
+    setCount(prevNumber => prevNumber + 100);
   };
 
   // DON'T change the code below
